@@ -2,7 +2,7 @@ package programmers;
 
 public class Level0 {
 	public static void main(String[] args) {
-		System.out.println(protractor(91));
+		System.out.println(sum_of_even(10));
 	}
 	
 	// 각도기 문제
@@ -24,8 +24,16 @@ public class Level0 {
 	
 	
 	// 짝수의 합
-	public int sum_of_even(int n) {
+	public static int sum_of_even(int n) {
 		int answer = 0;
+		
+		for(int i=1; i<=n; i++) {
+			
+			if(i%2==0) {
+				answer+=i;
+			}
+		}
+		
 		return answer;
 	}
 	
