@@ -2,7 +2,7 @@ package programmers;
 
 public class Level0 {
 	public static void main(String[] args) {
-		System.out.println(sum_of_even(10));
+		System.out.println(lamb_skewer(10, 3));
 	}
 	
 	// 각도기 문제
@@ -36,5 +36,37 @@ public class Level0 {
 		
 		return answer;
 	}
+	
+	// 배열의 평균값
+	public static double avg_of_array(int[] numbers) {
+        double answer = 0;
+        
+        double sum = 0;
+        
+        for(int i=0; i<numbers.length; i++) {
+        	sum += numbers[i];
+        	answer = sum/numbers.length;
+        }
+        
+        return answer;
+    }
+	
+	// 양꼬치
+	public static int lamb_skewer(int n, int k) {
+        int answer = 0;
+        
+        int n_price = n*12000;
+        int k_price = k*2000;
+        
+        int discount = 0;
+        
+        if((n/10)>=1) {
+        	discount = (n/10)*2000;
+        }
+        
+        answer = (n_price + k_price) - discount;
+        
+        return answer;
+    }
 	
 }
