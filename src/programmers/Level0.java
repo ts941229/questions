@@ -2,7 +2,8 @@ package programmers;
 
 public class Level0 {
 	public static void main(String[] args) {
-		System.out.println(lamb_skewer(10, 3));
+		
+		System.out.println(similarity_of_array(new String[] {"a", "b", "c"}, new String[] {"com", "b", "p", "c"}));
 	}
 	
 	// 각도기 문제
@@ -66,6 +67,19 @@ public class Level0 {
         
         answer = (n_price + k_price) - discount;
         
+        return answer;
+    }
+	
+	public static int similarity_of_array(String[] s1, String[] s2) {
+        int answer = 0;
+        
+        for(int i=0; i<s1.length; i++) {
+        	for(int j=0; j<s2.length; j++) {
+        		if(s1[i].equals(s2[j])) {
+        			answer+=1;
+        		}
+        	}
+        }
         return answer;
     }
 	
