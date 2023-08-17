@@ -3,7 +3,8 @@ package programmers;
 public class Level0 {
 	public static void main(String[] args) {
 		
-		System.out.println(similarity_of_array(new String[] {"a", "b", "c"}, new String[] {"com", "b", "p", "c"}));
+		cut_array(new int[] {1,2,3,4,5}, 1, 3);
+	
 	}
 	
 	// 각도기 문제
@@ -82,5 +83,44 @@ public class Level0 {
         }
         return answer;
     }
+	
+	public static String remove_specific_letter(String my_string, String letter) {
+        String answer = "";
+        
+        for(int i=0; i<my_string.length(); i++) {
+        	
+        	if(!Character.toString(my_string.charAt(i)).equals(letter)) {
+        		answer = answer+Character.toString(my_string.charAt(i));
+        	}
+        }
+        
+        return answer;
+    }
+	
+	public static int get_discount(int price) {
+        int answer = 0;
+
+        if (10 <= price && price < 100000){
+            answer = (int)price;
+        }else if (price >= 100000 && price < 300000){
+            answer = (int)(price * 0.95f);
+        }else if (price >= 300000 && price < 500000){
+            answer = (int)(price * 0.9f);
+        }else if (price >= 500000){
+            answer = (int)(price * 0.8f);
+        }
+        return answer;
+    }
+	
+	public static int[] cut_array(int[] numbers, int num1, int num2) {
+	        int[] answer = new int[num2];
+	        
+	        for(int i=num1; i<=num2; i++) {
+	        	
+	        }
+	        
+	        return answer;
+	}
+	
 	
 }
