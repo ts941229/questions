@@ -3,8 +3,8 @@ package programmers;
 public class Level0 {
 	public static void main(String[] args) {
 		
-		cut_array(new int[] {1,2,3,4,5}, 1, 3);
-	
+		
+		turn_array_over(new int[] {1,2,3,4,5});
 	}
 	
 	// 각도기 문제
@@ -113,14 +113,36 @@ public class Level0 {
     }
 	
 	public static int[] cut_array(int[] numbers, int num1, int num2) {
-	        int[] answer = new int[num2];
+			int length = (num2 - num1) + 1;
+			
+	        int[] answer = new int[length];
 	        
 	        for(int i=num1; i<=num2; i++) {
-	        	
+	        	answer[i-num1] = numbers[i];
 	        }
 	        
 	        return answer;
 	}
+	
+	public static int divide_pizza3(int slice, int n) {
+        int answer = 0;
+        float f = slice;
+        
+        answer = (int)Math.ceil(n/f);
+        
+        return answer;
+    }
+	
+	
+	public static int[] turn_array_over(int[] num_list) {
+        int[] answer = new int[num_list.length];
+        int j = 0;
+        for(int i=num_list.length-1; i>=0; i--) {
+        	answer[j] = num_list[i];
+        	j++;
+        }
+        return answer;
+    }
 	
 	
 }
