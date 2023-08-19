@@ -3,8 +3,8 @@ package programmers;
 public class Level0 {
 	public static void main(String[] args) {
 		
+		completion_condtion_of_triangle(new int[] {199,72,222});
 		
-		turn_array_over(new int[] {1,2,3,4,5});
 	}
 	
 	// 각도기 문제
@@ -71,6 +71,7 @@ public class Level0 {
         return answer;
     }
 	
+	// 배열의 유사성
 	public static int similarity_of_array(String[] s1, String[] s2) {
         int answer = 0;
         
@@ -84,6 +85,7 @@ public class Level0 {
         return answer;
     }
 	
+	// 특정 글자 삭제
 	public static String remove_specific_letter(String my_string, String letter) {
         String answer = "";
         
@@ -97,6 +99,7 @@ public class Level0 {
         return answer;
     }
 	
+	// 옷값 할인 받기
 	public static int get_discount(int price) {
         int answer = 0;
 
@@ -112,6 +115,7 @@ public class Level0 {
         return answer;
     }
 	
+	// 배열 자르기
 	public static int[] cut_array(int[] numbers, int num1, int num2) {
 			int length = (num2 - num1) + 1;
 			
@@ -124,6 +128,7 @@ public class Level0 {
 	        return answer;
 	}
 	
+	// 피자 나누기3
 	public static int divide_pizza3(int slice, int n) {
         int answer = 0;
         float f = slice;
@@ -133,7 +138,7 @@ public class Level0 {
         return answer;
     }
 	
-	
+	// 배열 뒤집기
 	public static int[] turn_array_over(int[] num_list) {
         int[] answer = new int[num_list.length];
         int j = 0;
@@ -143,6 +148,55 @@ public class Level0 {
         }
         return answer;
     }
+	
+	// 배열 요소의 길이
+	public static int[] length_of_element(String[] strlist) {
+        int[] answer = new int[strlist.length];
+        
+        for(int i=0; i<strlist.length; i++) {
+        	answer[i] = strlist[i].length();
+        }
+        
+        return answer;
+    }
+	
+	// 피자 나누기1
+	public static int divide_pizza1(int n) {
+        int answer = 0;
+        float slice = 7F;
+        
+        answer = (int)Math.ceil(n/slice);
+        return answer;
+    }
+	
+	// 배열의 요소 2배 만들기
+    public static int[] make_array_double(int[] numbers) {
+        int[] answer = new int[numbers.length];
+        
+        for(int i=0; i<numbers.length; i++) {
+        	answer[i] = (numbers[i]*2);
+        }
+        return answer;
+    }
+    
+    // 삼각형의 완성조건1
+    public static int completion_condtion_of_triangle(int[] sides) {
+        int answer = 0;
+        
+        int max = 0;
+        int sum = 0;
+        for(int i=0; i<sides.length; i++) {
+        	sum += sides[i];
+        	if(max<sides[i]) {
+        		max = sides[i];
+        	}
+        }
+        
+        answer = max<(sum-max) ? 1 : 2;
+        
+        return answer;
+    }
+    
 	
 	
 }
