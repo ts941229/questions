@@ -424,8 +424,61 @@ public class Level0 {
     // 제곱수 판별하기
     public int determine_perfect_square(int n) {
         int answer = 0;
+        
+        answer = 2;
+        for(int i=1; i<=1000; i++) {
+        	if((i*i)==n) {
+        		answer = 1;
+        	}
+        }
+        
         return answer;
     }
+    
+    // 세균증식
+    public int bacterial_proliperation(int n, int t) {
+        int answer = 0;
+        answer = n;
+        for(int i=1; i<=t; i++) {
+        	answer = (answer*2);
+        }
+        
+        return answer;
+    }
+    
+    // n의 배수 고르기
+    public int[] select_multiples_of_n(int n, int[] numlist) {
+        ArrayList<Integer> answer_list = new ArrayList<Integer>();
+        
+        for(int i=0; i<numlist.length; i++) {
+        	if(numlist[i]%n==0) {
+        		answer_list.add(numlist[i]);
+        	}
+        }
+        
+        int[] answer = new int[answer_list.size()];
+        for(int i=0; i<answer_list.size(); i++) {
+        	answer[i] = answer_list.get(i);
+        }
+        
+        return answer;
+    }
+    
+    // 가위바위보 (2 0 5)
+    public String rsp(String rsp) {
+        String answer = "";
+        
+        for(int i=0; i<rsp.length(); i++) {
+        	switch(String.valueOf(rsp.charAt(i))) {
+	        	case "2" : answer+="0"; break;
+	        	case "0" : answer+="5"; break;
+	        	case "5" : answer+="2"; break;
+        	}
+        }
+        
+        return answer;
+    }
+    
     
     
     
