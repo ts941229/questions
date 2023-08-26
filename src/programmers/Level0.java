@@ -5,14 +5,9 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class Level0 {
-	public static void main(String[] args) {
-		
-		number_of_pairs(20);
-		
-	}
 	
 	// 각도기 문제
-	public static int protractor(int angle) {
+	public int protractor(int angle) {
         int answer = 0;
         
         if(angle < 90 && angle > 0) {
@@ -30,7 +25,7 @@ public class Level0 {
 	
 	
 	// 짝수의 합
-	public static int sum_of_even(int n) {
+	public int sum_of_even(int n) {
 		int answer = 0;
 		
 		for(int i=1; i<=n; i++) {
@@ -44,7 +39,7 @@ public class Level0 {
 	}
 	
 	// 배열의 평균값
-	public static double avg_of_array(int[] numbers) {
+	public double avg_of_array(int[] numbers) {
         double answer = 0;
         
         double sum = 0;
@@ -58,7 +53,7 @@ public class Level0 {
     }
 	
 	// 양꼬치
-	public static int lamb_skewer(int n, int k) {
+	public int lamb_skewer(int n, int k) {
         int answer = 0;
         
         int n_price = n*12000;
@@ -76,7 +71,7 @@ public class Level0 {
     }
 	
 	// 배열의 유사성
-	public static int similarity_of_array(String[] s1, String[] s2) {
+	public int similarity_of_array(String[] s1, String[] s2) {
         int answer = 0;
         
         for(int i=0; i<s1.length; i++) {
@@ -90,7 +85,7 @@ public class Level0 {
     }
 	
 	// 특정 글자 삭제
-	public static String remove_specific_letter(String my_string, String letter) {
+	public String remove_specific_letter(String my_string, String letter) {
         String answer = "";
         
         for(int i=0; i<my_string.length(); i++) {
@@ -104,7 +99,7 @@ public class Level0 {
     }
 	
 	// 옷값 할인 받기
-	public static int get_discount(int price) {
+	public int get_discount(int price) {
         int answer = 0;
 
         if (10 <= price && price < 100000){
@@ -120,7 +115,7 @@ public class Level0 {
     }
 	
 	// 배열 자르기
-	public static int[] cut_array(int[] numbers, int num1, int num2) {
+	public int[] cut_array(int[] numbers, int num1, int num2) {
 			int length = (num2 - num1) + 1;
 			
 	        int[] answer = new int[length];
@@ -133,7 +128,7 @@ public class Level0 {
 	}
 	
 	// 피자 나누기3
-	public static int divide_pizza3(int slice, int n) {
+	public int divide_pizza3(int slice, int n) {
         int answer = 0;
         float f = slice;
         
@@ -143,7 +138,7 @@ public class Level0 {
     }
 	
 	// 배열 뒤집기
-	public static int[] turn_array_over(int[] num_list) {
+	public int[] turn_array_over(int[] num_list) {
         int[] answer = new int[num_list.length];
         int j = 0;
         for(int i=num_list.length-1; i>=0; i--) {
@@ -154,7 +149,7 @@ public class Level0 {
     }
 	
 	// 배열 요소의 길이
-	public static int[] length_of_element(String[] strlist) {
+	public int[] length_of_element(String[] strlist) {
         int[] answer = new int[strlist.length];
         
         for(int i=0; i<strlist.length; i++) {
@@ -165,7 +160,7 @@ public class Level0 {
     }
 	
 	// 피자 나누기1
-	public static int divide_pizza1(int n) {
+	public int divide_pizza1(int n) {
         int answer = 0;
         float slice = 7F;
         
@@ -174,7 +169,7 @@ public class Level0 {
     }
 	
 	// 배열의 요소 2배 만들기
-    public static int[] make_array_double(int[] numbers) {
+    public int[] make_array_double(int[] numbers) {
         int[] answer = new int[numbers.length];
         
         for(int i=0; i<numbers.length; i++) {
@@ -184,7 +179,7 @@ public class Level0 {
     }
     
     // 삼각형의 완성조건1
-    public static int completion_condtion_of_triangle(int[] sides) {
+    public int completion_condtion_of_triangle(int[] sides) {
         int answer = 0;
         
         int max = 0;
@@ -202,7 +197,7 @@ public class Level0 {
     }
     
     // 편지
-    public static int letter(String message) {
+    public int letter(String message) {
         int answer = 0;
         
         answer = message.length() * 2;
@@ -211,7 +206,7 @@ public class Level0 {
     }
     
     // 문자열 뒤집기
-    public static String turn_string_over(String my_string) {
+    public String turn_string_over(String my_string) {
         String answer = "";
         char[] answer_array = new char[my_string.toCharArray().length];
         int idx = 0;
@@ -224,7 +219,7 @@ public class Level0 {
     }
 	
     // 짝수와 홀수 갯수
-    public static int[] num_even_odd(int[] num_list) {
+    public int[] num_even_odd(int[] num_list) {
         int[] answer = new int[2];
         int even = 0;
         int odd = 0;
@@ -242,7 +237,7 @@ public class Level0 {
     }
     
     // 머쓱이보다 키큰사람
-    public static int taller_than_mussk(int[] array, int height) {
+    public int taller_than_mussk(int[] array, int height) {
         int answer = 0;
         
         for(int i=0; i<array.length; i++) {
@@ -255,7 +250,7 @@ public class Level0 {
     }
     
     // 최댓값 만들기
-    public static int make_maximum(int[] numbers) {
+    public int make_maximum(int[] numbers) {
         int answer = 0;
         
         Arrays.sort(numbers);
@@ -268,7 +263,7 @@ public class Level0 {
     }
     
     // 점의 위치 구하기
-    public static int position_of_point(int[] dot) {
+    public int position_of_point(int[] dot) {
         int answer = 0;
         
         if(dot[0]>0 && dot[1]>0) {
@@ -285,7 +280,7 @@ public class Level0 {
     }
     
     // 문자열안에 문자열
-    public static int string_in_string(String str1, String str2) {
+    public int string_in_string(String str1, String str2) {
         int answer = 0;
         
         if(str1.indexOf(str2)>=0) {
@@ -298,7 +293,7 @@ public class Level0 {
     }
     
     // 중복된 숫자 개수
-    public static int number_of_duplicate_numbers(int[] array, int n) {
+    public int number_of_duplicate_numbers(int[] array, int n) {
         int answer = 0;
         
         for(int i=0; i<array.length; i++) {
@@ -313,7 +308,7 @@ public class Level0 {
     }
     
     // 모음제거
-    public static String remove_vowels(String my_string) {
+    public String remove_vowels(String my_string) {
         String answer = "";
         String[] vowels = {"a", "e", "i", "o", "u"};
         StringBuilder sb = new StringBuilder(my_string);
@@ -338,7 +333,7 @@ public class Level0 {
     }
     
     // 순서쌍의 개수
-    public static int number_of_pairs(int n) {
+    public int number_of_pairs(int n) {
         int answer = 0;
         
         for(int i=1; i<=n; i++) {
@@ -347,6 +342,88 @@ public class Level0 {
         	}
         }
         
+        return answer;
+    }
+    
+    // 문자 반복 출력하기
+    public String print_string_in_repetition(String my_string, int n) {
+        String answer = "";
+
+        for(int i=0; i<my_string.length(); i++) {
+        	for(int j=0; j<n; j++) {
+        		answer = answer+my_string.charAt(i);
+        	}
+        }
+        
+        return answer;
+    }
+    
+    // 아이스 아메리카노
+    public int[] iced_americano(int money) {
+        int[] answer = new int[2];
+        int price = 5500;
+        
+        answer[0] = money/price;
+        answer[1] = money%price;
+        
+        return answer;
+    }
+    
+    // 자릿수 더하기
+    public int sum_of_digits(int n) {
+        int answer = 0;
+        String container = "";
+        container = n + "";
+        for(int i=0; i<container.length(); i++) {
+        	answer += Integer.parseInt(String.valueOf(container.charAt(i)));
+        }
+        return answer;
+    }
+    
+    // 중앙값 구하기
+    public int get_median(int[] array) {
+        int answer = 0;
+        
+        Arrays.sort(array);
+        answer = array[(array.length/2)];
+        
+        return answer;
+    }
+    
+    // 숨은 숫자들의 합
+    public int sum_of_numbers_hidden(String my_string) {
+        int answer = 0;
+        for(int i=0; i<my_string.length(); i++) {
+        	 if(Character.isDigit(my_string.charAt(i))) {
+        		 answer += Integer.parseInt(String.valueOf(my_string.charAt(i)));
+        	 }
+        }
+        return answer;
+    }
+    
+    // 짝수는 싫어요
+    public int[] hate_even(int n) {
+    	int answer_size = 0;
+    	if(n%2==0) {
+    		answer_size = n/2;
+    	}else {
+    		answer_size = (n/2)+1;
+    	}
+    	int[] answer = new int[answer_size];
+        int idx = 0;
+        for(int i=1; i<=n; i++) {
+        	if((i%2)!=0) {
+        		answer[idx]=i;
+        		idx++;
+        	}
+        }
+        
+        return answer;
+    }
+    
+    // 제곱수 판별하기
+    public int determine_perfect_square(int n) {
+        int answer = 0;
         return answer;
     }
     
