@@ -1,6 +1,6 @@
 package programmers;
 
-public class Trigger {
+public class Main {
 	
 	
 	public static void main(String[] args) {
