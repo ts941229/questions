@@ -170,4 +170,26 @@ public class StarQuestion {
 		
 	}
 	
+	// 정수 n의 값을 입력받아 별표를 출력하는 프로그램을 아래 예를 참고하여 작성해보세요.
+	public void star10() {
+		
+		int n = sc.nextInt();
+		int cnt = 0;
+		for(int i=n; i>0; i--) {
+			// 0 2 4 8
+			for(int j=0; j<(cnt*2); j++) {
+				System.out.print(" ");
+			}
+			for(int j=0; j<(i*2)-1; j++) {
+				System.out.print("* ");
+			}
+			
+			System.out.println();
+			cnt++;
+		}
+		
+	}
+	
+	
+	
 }
