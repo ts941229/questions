@@ -6,7 +6,7 @@ public class Main {
 		StarQuestion sq = new StarQuestion();
 		Loop lp = new Loop();
 //		sq.star10();
-		lp.loop12();
+		lp.loop18();
 		
 		
 	}

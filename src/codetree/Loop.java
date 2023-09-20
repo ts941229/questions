@@ -220,8 +220,108 @@ public class Loop {
 	//	나머지 경우에는 윤년이 아닙니다.
 	public void loop13() {
 		
+		int n = sc.nextInt();
 		
+		int cnt = 0;
+		boolean isLeap = false;
+		for(int i=1; i<=n; i++) {
+			
+			if(i%4==0) {
+				isLeap = true;
+			}
+			
+			if(i%4==0 && i%100==0) {
+				isLeap = false;
+			}
+			
+			if(i%4==0 && i%100==0 && i%400==0) {
+				isLeap = true;
+			}
+			
+			if(isLeap) {
+				cnt++;
+			}
+			isLeap = false;
+		}
+
+		System.out.println(cnt);
 		
+	}
+	
+	// 5개의 숫자가 주어졌을 때, 짝수가 몇 번 등장했는지 확인해보는 프로그램을 작성해보세요.
+	public void loop14() {
+		int cnt = 0;
+		for(int i=0; i<5; i++) {
+			if(sc.nextInt()%2==0) {
+				cnt++;
+			}
+		}
+		System.out.println(cnt);
+	}
+	
+	// 숫자 n이 주어졌을 때, n이 완전수인지 판단하는 프로그램을 작성해보세요. 
+	// 완전수란 자기 자신을 제외한 약수의 합이 자신이 되는 수를 나타냅니다.
+	// 예를 들어 6의 경우 1 + 2 + 3 = 6 이기 때문에 완전수입니다.
+	public void loop15() {
+		int n = sc.nextInt();
+		boolean isP = false;
+		int cd = 0;
+		for(int i=1; i<n; i++) {
+			if(n%i==0) {
+				cd+=i;
+			}
+		}
+		if(cd==n) {
+			isP= true;
+		}
+		
+		String answer = (isP) ? "P" : "N" ;
+		System.out.println(answer);
+	}
+	
+	//	자연수 n을 입력받고, n개의 정수를 입력받아 합계와 평균을 출력하는 프로그램을 작성해보세요.
+	public void loop16() {
+		int n = sc.nextInt();
+		int sum = 0;
+		double avg = 0;
+		for(int i=0; i<n; i++) {
+			sum+=sc.nextInt();
+		}
+		
+		avg = (double)sum/n;
+		
+		System.out.printf("%d %.1f", sum, avg);
+		
+	}
+
+	// 두 정수 a, b를 입력받고, a이상 b이하 수 중 다음 조건에 맞는 수들의 합을 구하는 프로그램을 작성해보세요.
+	// 6의 배수이면서, 8의 배수가 아닌 수
+	public void loop17() {
+		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+		int sum = 0;
+		for(int i=a; i<=b; i++) {
+			if(i%6==0 && i%8!=0) {
+				sum+=i;
+			}
+		}
+		System.out.println(sum);
+	}
+	
+	// 두 정수 a와 b가 주어졌을 때, 1부터 b까지의 수 중 a의 배수들의 곱을 구하는 프로그램을 작성해보세요.
+	public void loop18() {
+		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int answer = 1;
+		for(int i=1; i<=b; i++) {
+			if(i%a==0) {
+				answer*=i;
+			}
+		}
+		System.out.println(answer);
 	}
 	
 	
